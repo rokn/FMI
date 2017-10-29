@@ -64,6 +64,10 @@ int main() {
 		repeats = 0;
 		do {
 			cin >> in;
+			if(cin.eof()) {
+				cout << "Why are you doing this ??\n\n";
+				return 0;
+			}
 			in = tolower(in);
 			repeats++;
 			if(repeats % 5 == 0) {
@@ -103,11 +107,19 @@ int main() {
 				cout << "E[x]it the game\n";
 
 				cin >> in;
+				if(cin.eof()) {
+					cout << "Why are you doing this ??\n\n";
+					return 0;
+				}
 				in = tolower(in);
 
 				while (in != 'i' && in != 'a' && in != 'd' && in != 'p' && in != 'x') {
 					cout << "I'm not sure what you meant :/\n";
 					cin >> in;
+					if(cin.eof()) {
+						cout << "Why are you doing this ??\n\n";
+						return 0;
+					}
 					in = tolower(in);
 				}
 
@@ -159,7 +171,7 @@ int main() {
 							pCurrHealth = pBaseHealth + pPointsHealth;
 							cout << "\nYour health has been replenished.\n";
 						} else {
-							cout << "\nYou don't have any potions left!\n";
+							cout << "\nYou don't have any potions left!\n\n";
 						}
 						break;
 					case 'x':
@@ -236,23 +248,32 @@ int main() {
 					skillPoints = skillPointsPerLevel;
 					mLevel++;
 					credits++;
+					roll = rand() % 2;
 					cout << "\nCongratulations! You defeated a Level " << mLevel
 						<< " monster!\n";
 					cout << "Your health is replenished!\n";
 					cout << "You get 1 credit!\n";
 					cout << "You get " << skillPoints << " skill points!\n";
+					if(roll == 1) {
+						pPotions++;
+						cout << "You also found a potion in the monster!\n";
+					}
 
 					//Skill appointment
 					while(skillPoints > 0) {
-						cout << "\nYou have " << skillPoints << "skillpoints left.\n";
+						cout << "\nYou have " << skillPoints << " skill points left.\n";
 						cout << "What skill do you want to improve: \n";
 						cout << "[H]ealth (Current: " << pPointsHealth << ") \n";
 						cout << "[D]amage (Current: " << pPointsDamage << ") \n";
 						cout << "[A]rmor (Current: " << pPointsArmor << ") \n";
 						cout << "[L]uck (Current: " << pPointsLuck << ") \n";
 						cin >> in;
+						if(cin.eof()) {
+							cout << "Why are you doing this ??\n\n";
+							return 0;
+						}
 						in = tolower(in);
-						
+
 						switch(in) {
 							case 'h':
 								pPointsHealth++;
@@ -273,6 +294,8 @@ int main() {
 
 						skillPoints--;
 					}
+
+
 					cout << "\n\n";
 
 					break;
@@ -285,6 +308,10 @@ int main() {
 						repeats = 0;
 						do {
 							cin >> in;
+							if(cin.eof()) {
+								cout << "Why are you doing this ??\n\n";
+								return 0;
+							}
 							in = tolower(in);
 							repeats++;
 							if(repeats % 5 == 0) {
@@ -306,6 +333,10 @@ int main() {
 					repeats = 0;
 					do {
 						cin >> in;
+						if(cin.eof()) {
+							cout << "Why are you doing this ??\n\n";
+							return 0;
+						}
 						in = tolower(in);
 						repeats++;
 						if(repeats % 5 == 0) {
