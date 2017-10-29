@@ -97,6 +97,7 @@ int main() {
 				float mTurnDefenceMultiplier = 1;
 
 				// Player turn
+				cout << "------------------------------------------------------\n";
 				cout << "You are facing a monster of level " << mLevel+1 <<".\n\n";
 				cout << "What are you going to do:\n";
 				cout << "Show [I]nfo\n";
@@ -138,7 +139,6 @@ int main() {
 						cout << "Damage: " << mBaseDamage + mLevel * mStatsPerLevel << "\n";
 						cout << "Armor: " << mBaseArmor + mLevel * mStatsPerLevel << "\n";
 						cout << "Luck: " << mBaseLuck + mLevel * mStatsPerLevel << "\n";
-						cout << "\n\n";
 						break;
 					case 'a':
 						//Attack
@@ -156,7 +156,7 @@ int main() {
 						cout << "\nYou defend.\n";
 						actualTurn = true;
 						pTurnDefenceMultiplier = 0.5f;
-						fullDefenceChance = (pBaseLuck + pPointsLuck) / 2;
+						fullDefenceChance = 50 + ((pBaseLuck + pPointsLuck) / 2);
 						roll = rand() % 100 + 1;
 						if (fullDefenceChance >= roll) {
 							pTurnDefenceMultiplier = 0;
@@ -182,6 +182,8 @@ int main() {
 				// End Player turn
 
 				if(!actualTurn) {
+					cout << "------------------------------------------------------\n";
+					cout << "\n\n";
 					continue;
 				}
 
@@ -239,6 +241,7 @@ int main() {
 					inTurn = false;
 				}
 
+				cout << "------------------------------------------------------\n";
 				cout << "\n\n";
 			}
 
