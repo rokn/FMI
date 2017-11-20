@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ..
+scp  -q -r ./programming/ server:/home/rokner/fmi/

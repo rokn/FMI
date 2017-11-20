@@ -1,3 +1,6 @@
+/*
+ * Antonio Mindov FN:45454, Course: 1, Group: 2
+*/
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
