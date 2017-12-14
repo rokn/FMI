@@ -14,7 +14,13 @@ check_success() {
 	desired_file=$1
 	if [ -f $desired_file ]; then
 		cmp --silent $OUT_FILE $desired_file
-		if [ $? -eq "0" ]; then
+		res=$?
+		#echo "CMP: $res"
+		#echo "RES:"
+		#cat $OUT_FILE
+		#echo "DES:"
+		#cat $desired_file
+		if [ $res -eq "0" ]; then
 			return 1
 		else
 			return 0
@@ -28,7 +34,11 @@ for input in `ls $TEST_FOLDER/*.in | sort -V`; do
 	printf "Running test: $input"
 	$EXEC < $input > $OUT_FILE &
 	pid=$!
-	printf ": "
+	#printf "\nInput:\n"
+	#cat $input
+	#printf "Output:\n"
+	#cat $OUT_FILE
+	printf " : "
 	wait $pid
 	desired_file="${input%.*}.out"
 	check_success $desired_file

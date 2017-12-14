@@ -1,7 +1,6 @@
-
 #include "Bitmap.h"
-
 #include <iostream>
+
 typedef unsigned int uint;
 
 void cropImage(struct image_t& image);
@@ -11,15 +10,16 @@ void setColor(uint x, uint y, uint color, uint width, struct image_t& image);
 bool isDirty(uint color, uint targetColor, uint proximity);
 uint getFirstDirtyHorizontal(uint startY, uint step, struct image_t& image);
 uint getFirstDirtyVertical(uint startX, uint step, struct image_t& image);
+void printError(int error);
 
 const uint STEP_FORWARD = 1;
 const uint STEP_BACKWARD = -1;
 
-const uint MAX_COLOR = 0xff;
-const uint RED = 2;
-const uint GREEN = 1;
+const uint COLOR_MASK = 0xFF;
 const uint BLUE = 0;
-const uint MAX_DISTANCE = MAX_COLOR * MAX_COLOR * 3; // Distance between black and white
+const uint GREEN = 1;
+const uint RED = 2;
+const uint MAX_DISTANCE = 0xFF * 0xFF * 3; // Distance between black and white
 
 const size_t MAX_SIZE = 100000;
 
@@ -37,23 +37,26 @@ int main()
 
 	int rval;
 
-	rval = LoadBitmap("test_small.bmp", image.colors, MAX_SIZE, image.width, image.height);
+	rval = LoadBitmap("input.bmp", image.colors, MAX_SIZE, image.width, image.height);
 
 	if (rval != ALL_OK)
 	{
-		std::cerr << "Cannot load image data from test.bmp! Error code " << rval << "\n";
+		printError(rval);
 		return 1;
 	}
 
-	image.cropProximity = 50;
-	image.cropColor = 0xFFFFFFFF;
+	std::cout << "Enter crop color:" << std::endl;
+	std::cin >> image.cropColor;
+	std::cout << "Enter color proximity:" << std::endl;
+	std::cin >> image.cropProximity;
+
 	cropImage(image);
 
-	rval = SaveBitmap("test_new.bmp", image.colors, image.width, image.height);
+	rval = SaveBitmap("result.bmp", image.colors, image.width, image.height);
 
 	if (rval != ALL_OK)
 	{
-		std::cerr << "Cannot save image data to test_new.bmp! Error code " << rval << "\n";
+		printError(rval);
 		return 2;
 	}
 
@@ -104,7 +107,7 @@ bool isDirty(uint color, uint targetColor, uint proximity) {
 
 	uint diff = rDiff + gDiff + bDiff;
 	float percentage = ((float)diff / MAX_DISTANCE) * 100;
-	return percentage > (100 - proximity);
+	return percentage > proximity;
 }
 
 uint getFirstDirtyHorizontal(uint startY, uint step, struct image_t& image) {
@@ -134,5 +137,31 @@ uint getFirstDirtyVertical(uint startX, uint step, struct image_t& image) {
 }
 
 uint getColor(uint combined, uint colorPosition) {
-	return (combined&(MAX_COLOR << colorPosition)) >> colorPosition;
+	return (combined >> colorPosition) & COLOR_MASK;
+}
+
+void printError(int error) {
+	std::cerr << "An error occured: ";
+	switch(error){
+		case ERR_CANNOT_OPEN_FILE:
+			std::cerr << "File not found!" << std::endl;
+			break;
+		case ERR_WRONG_FILE_TYPE:
+			std::cerr << "Wrong file type!" << std::endl;
+			break;
+		case ERR_BUFFER_TOO_SMALL:
+			std::cerr << "Image too big!" << std::endl;
+			break;
+		case ERR_FILE_READ_ERROR:
+			std::cerr << "Couldn't read file!" << std::endl;
+			break;
+		case ERR_CANNOT_ALLOCATE_MEMORY:
+			std::cerr << "Couldn't allocate memory!" << std::endl;
+			break;
+		case ERR_ZERO_SIZE:
+			std::cerr << "Image can't be with 0 size!" << std::endl;
+			break;
+		default:
+			std::cerr << "Something happened. :)" << std::endl;
+	}
 }

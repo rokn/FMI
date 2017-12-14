@@ -21,8 +21,6 @@ int main() {
 }
 
 bool isMagicSquare(int* arr, int n) {
-	if (n%2==0) { return false; }
-
 	int sum = getSum(arr, 1, n);
 	bool isMagic = true;
 
