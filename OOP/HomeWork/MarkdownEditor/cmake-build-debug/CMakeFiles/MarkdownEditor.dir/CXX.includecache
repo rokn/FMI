@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.cpp
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+Line.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.h
+fstream
+-
+iostream
+-
+cstring
+-
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.cpp
+cstring
+-
+iostream
+-
+Line.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.h
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.h
+ostream
+-
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/main.cpp
+iostream
+-
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+

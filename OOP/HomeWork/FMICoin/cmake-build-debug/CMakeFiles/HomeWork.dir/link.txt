@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/HomeWork.dir/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o CMakeFiles/HomeWork.dir/main.cpp.o  -o HomeWork 

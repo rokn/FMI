@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/MarkdownEditor.dir/Document.cpp.o CMakeFiles/MarkdownEditor.dir/Line.cpp.o CMakeFiles/MarkdownEditor.dir/main.cpp.o  -o MarkdownEditor 

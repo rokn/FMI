@@ -1,0 +1,14 @@
+#!/bin/bash
+
+EXEC="./$1"
+TEST_FOLDER="tests"
+
+echo "Generating Outputs..."
+
+for input in `ls $TEST_FOLDER/*.in | sort -V`; do
+	printf "Generating out for: $input\n"
+	output_file="${input%.*}.out"
+	$EXEC < $input > $output_file &
+	pid=$!
+	wait $pid
+done

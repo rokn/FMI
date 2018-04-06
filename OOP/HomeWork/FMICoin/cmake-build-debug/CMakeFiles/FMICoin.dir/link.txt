@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/FMICoin.dir/src/Order.cpp.o CMakeFiles/FMICoin.dir/src/System.cpp.o CMakeFiles/FMICoin.dir/src/Transaction.cpp.o CMakeFiles/FMICoin.dir/src/Wallet.cpp.o CMakeFiles/FMICoin.dir/src/main.cpp.o  -o FMICoin 

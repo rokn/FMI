@@ -1,0 +1,3 @@
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/MarkdownEditor.dir

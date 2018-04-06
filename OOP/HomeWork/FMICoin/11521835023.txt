@@ -1,0 +1,2 @@
+Sender: Petar Armyanov; Receiver: Antonio Mindov; Amount: 50
+Transactions: 1; Money transferred: 18750
