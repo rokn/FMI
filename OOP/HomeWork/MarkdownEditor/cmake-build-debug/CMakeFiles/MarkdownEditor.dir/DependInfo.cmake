@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.cpp" "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/MarkdownEditor.dir/CommandInterpreter.cpp.o"
   "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.cpp" "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/MarkdownEditor.dir/Document.cpp.o"
   "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.cpp" "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/MarkdownEditor.dir/Line.cpp.o"
   "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/main.cpp" "/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/cmake-build-debug/CMakeFiles/MarkdownEditor.dir/main.cpp.o"

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MarkdownEditor.dir/CommandInterpreter.cpp.o"
   "CMakeFiles/MarkdownEditor.dir/Document.cpp.o"
   "CMakeFiles/MarkdownEditor.dir/Line.cpp.o"
   "CMakeFiles/MarkdownEditor.dir/main.cpp.o"

@@ -123,6 +123,33 @@ MarkdownEditor/fast:
 	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/build
 .PHONY : MarkdownEditor/fast
 
+CommandInterpreter.o: CommandInterpreter.cpp.o
+
+.PHONY : CommandInterpreter.o
+
+# target to build an object file
+CommandInterpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/CommandInterpreter.cpp.o
+.PHONY : CommandInterpreter.cpp.o
+
+CommandInterpreter.i: CommandInterpreter.cpp.i
+
+.PHONY : CommandInterpreter.i
+
+# target to preprocess a source file
+CommandInterpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/CommandInterpreter.cpp.i
+.PHONY : CommandInterpreter.cpp.i
+
+CommandInterpreter.s: CommandInterpreter.cpp.s
+
+.PHONY : CommandInterpreter.s
+
+# target to generate assembly for a file
+CommandInterpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/CommandInterpreter.cpp.s
+.PHONY : CommandInterpreter.cpp.s
+
 Document.o: Document.cpp.o
 
 .PHONY : Document.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MarkdownEditor"
+	@echo "... CommandInterpreter.o"
+	@echo "... CommandInterpreter.i"
+	@echo "... CommandInterpreter.s"
 	@echo "... Document.o"
 	@echo "... Document.i"
 	@echo "... Document.s"

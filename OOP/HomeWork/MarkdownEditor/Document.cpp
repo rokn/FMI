@@ -9,7 +9,7 @@ using std::ios;
 using std::cout;
 using std::endl;
 
-static const unsigned MAX_LINE_LENGTH = 1024;
+const unsigned Document::MAX_LINE_LENGTH = 1024;
 
 Document::Document()
 : fileName(nullptr)

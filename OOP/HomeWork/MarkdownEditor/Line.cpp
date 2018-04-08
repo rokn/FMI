@@ -16,7 +16,7 @@ Line::Line(const char *content)
 }
 
 bool Line::setContent(const char *content) {
-    this->content = new (std::nothrow) char[strlen(content)];
+    this->content = new (std::nothrow) char[strlen(content) + 1];
     if(!content) {
         return false;
     }
@@ -140,11 +140,11 @@ void Line::writeMod(std::ostream &output, unsigned word, bool isBack) const {
     unsigned modDiff = wordMods[word] & (~otherMod); // Inverse implication
 
     if(modDiff & Document::ITALIC) {
-        output << '*';
+        output << "**";
     }
 
     if(modDiff & Document::BOLD) {
-        output << "**";
+        output << '*';
     }
 }
 

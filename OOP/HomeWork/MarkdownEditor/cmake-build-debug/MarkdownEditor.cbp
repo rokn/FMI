@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.cpp">
+			<Option target="MarkdownEditor"/>
+		</Unit>
+		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h">
+			<Option target="MarkdownEditor"/>
+		</Unit>
 		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.cpp">
 			<Option target="MarkdownEditor"/>
 		</Unit>

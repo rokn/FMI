@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.cpp
+CommandInterpreter.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+iostream
+-
+cstring
+-
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.cpp
 Document.h
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
@@ -39,4 +53,6 @@ iostream
 -
 Document.h
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+CommandInterpreter.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h
 

@@ -5,6 +5,8 @@ class Line;
 
 class Document {
 public:
+    static const unsigned MAX_LINE_LENGTH;
+
     enum WordMod {
         NONE   = 0,
         BOLD   = 1,
