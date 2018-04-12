@@ -9,6 +9,10 @@ CMakeFiles/MarkdownEditor.dir/Document.cpp.o
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.cpp
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.h
+CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.o
+ /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+ /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.cpp
+ /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h
 CMakeFiles/MarkdownEditor.dir/Line.cpp.o
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.cpp
@@ -16,4 +20,5 @@ CMakeFiles/MarkdownEditor.dir/Line.cpp.o
 CMakeFiles/MarkdownEditor.dir/main.cpp.o
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+ /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h
  /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/main.cpp

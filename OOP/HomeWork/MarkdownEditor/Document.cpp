@@ -5,6 +5,7 @@
 #include <cstring>
 
 using std::ifstream;
+using std::ofstream;
 using std::ios;
 using std::cout;
 using std::endl;
@@ -13,6 +14,7 @@ const unsigned Document::MAX_LINE_LENGTH = 1024;
 
 Document::Document()
 : fileName(nullptr)
+, newFileName(nullptr)
 , fileOpened(false)
 , firstLine(nullptr)
 , lastLine(nullptr)
@@ -32,6 +34,12 @@ bool Document::open(const char *filename) {
     if(!file) {
         return false;
     }
+
+    fileName = new (std::nothrow) char[strlen(filename) + 1];
+    if(!filename) {
+        return false;
+    }
+    strcpy(fileName, filename);
 
     char* buffer = new (std::nothrow) char[MAX_LINE_LENGTH+1];
     if(!buffer) {
@@ -67,12 +75,20 @@ bool Document::open(const char *filename) {
 }
 
 bool Document::save() {
+    ofstream out(getMarkdownName());
+
+    if(!out) {
+        return false;
+    }
+
     Line* curr = firstLine;
 
     while(curr) {
-        curr->write(cout);
+        curr->write(out);
         curr = curr->getNextLine();
     }
+
+    return true;
 }
 
 Document::~Document() {
@@ -85,6 +101,7 @@ void Document::close() {
     }
 
     delete[] fileName;
+    delete[] newFileName;
 
     Line* curr = firstLine;
     while(curr) {
@@ -200,4 +217,23 @@ Document::ModStatus Document::removeLine(unsigned line) {
 
     --lineCount;
     return SUCCESS;
+}
+
+const char * Document::getMarkdownName() {
+    if(newFileName) {
+        return newFileName;
+    }
+
+    newFileName = new char[strlen(fileName)];
+    strcpy(newFileName, fileName);
+    char* tmp = newFileName;
+
+    while(*tmp != '.') {
+        tmp++;
+    }
+
+    tmp++;
+    strcpy(tmp, "md");
+
+    return newFileName;
 }

@@ -118,7 +118,6 @@ void CommandInterpreter::executeCommand(Command command) {
 
 void CommandInterpreter::handleStatus(Document::ModStatus status) {
     switch(status) {
-        case Document::SUCCESS: break;
         case Document::FILE_NOT_OPENED:
             cout << "File is not opened!" << endl;
             break;

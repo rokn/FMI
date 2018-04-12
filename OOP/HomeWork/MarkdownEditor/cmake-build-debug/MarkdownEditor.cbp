@@ -96,6 +96,12 @@
 		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h">
 			<Option target="MarkdownEditor"/>
 		</Unit>
+		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.cpp">
+			<Option target="MarkdownEditor"/>
+		</Unit>
+		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h">
+			<Option target="MarkdownEditor"/>
+		</Unit>
 		<Unit filename="/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.cpp">
 			<Option target="MarkdownEditor"/>
 		</Unit>

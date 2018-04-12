@@ -9,11 +9,16 @@ CMakeFiles/MarkdownEditor.dir/Document.cpp.o: ../Document.cpp
 CMakeFiles/MarkdownEditor.dir/Document.cpp.o: ../Document.h
 CMakeFiles/MarkdownEditor.dir/Document.cpp.o: ../Line.h
 
+CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.o: ../Document.h
+CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.o: ../DocumentFactory.cpp
+CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.o: ../DocumentFactory.h
+
 CMakeFiles/MarkdownEditor.dir/Line.cpp.o: ../Document.h
 CMakeFiles/MarkdownEditor.dir/Line.cpp.o: ../Line.cpp
 CMakeFiles/MarkdownEditor.dir/Line.cpp.o: ../Line.h
 
 CMakeFiles/MarkdownEditor.dir/main.cpp.o: ../CommandInterpreter.h
 CMakeFiles/MarkdownEditor.dir/main.cpp.o: ../Document.h
+CMakeFiles/MarkdownEditor.dir/main.cpp.o: ../DocumentFactory.h
 CMakeFiles/MarkdownEditor.dir/main.cpp.o: ../main.cpp
 

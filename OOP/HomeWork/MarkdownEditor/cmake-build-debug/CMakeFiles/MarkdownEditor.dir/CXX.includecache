@@ -34,6 +34,14 @@ cstring
 
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
 
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.cpp
+DocumentFactory.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h
+
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h
+Document.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
+
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Line.cpp
 cstring
 -
@@ -55,4 +63,6 @@ Document.h
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/Document.h
 CommandInterpreter.h
 /home/rokner/FMI/OOP/HomeWork/MarkdownEditor/CommandInterpreter.h
+DocumentFactory.h
+/home/rokner/FMI/OOP/HomeWork/MarkdownEditor/DocumentFactory.h
 

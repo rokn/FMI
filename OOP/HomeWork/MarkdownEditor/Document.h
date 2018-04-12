@@ -40,12 +40,15 @@ public:
 private:
     bool fileOpened;
     char *fileName;
+    char *newFileName;
     Line *firstLine;
     Line *lastLine;
     unsigned lineCount;
 
     bool isValidLine(unsigned line);
     Line* getLine(unsigned line);
+
+    const char * getMarkdownName();
 };
 
 

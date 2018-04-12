@@ -177,6 +177,33 @@ Document.cpp.s:
 	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/Document.cpp.s
 .PHONY : Document.cpp.s
 
+DocumentFactory.o: DocumentFactory.cpp.o
+
+.PHONY : DocumentFactory.o
+
+# target to build an object file
+DocumentFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.o
+.PHONY : DocumentFactory.cpp.o
+
+DocumentFactory.i: DocumentFactory.cpp.i
+
+.PHONY : DocumentFactory.i
+
+# target to preprocess a source file
+DocumentFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.i
+.PHONY : DocumentFactory.cpp.i
+
+DocumentFactory.s: DocumentFactory.cpp.s
+
+.PHONY : DocumentFactory.s
+
+# target to generate assembly for a file
+DocumentFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/MarkdownEditor.dir/build.make CMakeFiles/MarkdownEditor.dir/DocumentFactory.cpp.s
+.PHONY : DocumentFactory.cpp.s
+
 Line.o: Line.cpp.o
 
 .PHONY : Line.o
@@ -246,6 +273,9 @@ help:
 	@echo "... Document.o"
 	@echo "... Document.i"
 	@echo "... Document.s"
+	@echo "... DocumentFactory.o"
+	@echo "... DocumentFactory.i"
+	@echo "... DocumentFactory.s"
 	@echo "... Line.o"
 	@echo "... Line.i"
 	@echo "... Line.s"
