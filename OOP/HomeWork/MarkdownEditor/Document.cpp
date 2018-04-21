@@ -26,6 +26,7 @@ Document::Document(const char *filename)
 }
 
 bool Document::open(const char *filename) {
+    bool success = true;
     if(fileOpened) {
         return false;
     }
@@ -43,26 +44,25 @@ bool Document::open(const char *filename) {
 
     char* buffer = new (std::nothrow) char[MAX_LINE_LENGTH+1];
     if(!buffer) {
-        return false;
+        success = false;
     }
 
-    if(file.getline(buffer, MAX_LINE_LENGTH)) {
+    if(success && file.getline(buffer, MAX_LINE_LENGTH)) {
         firstLine = new (std::nothrow) Line(buffer);
-        if(!firstLine) {
-            return false;
-        }
+        success = firstLine != nullptr;
 
-        lastLine = firstLine;
-    } else {
-        return true;
+        if(success) {
+            lastLine = firstLine;
+            lineCount = 1;
+        }
     }
 
-    lineCount = 1;
-
-    while(file.getline(buffer, MAX_LINE_LENGTH)) {
-        Line* curr = new (std::nothrow) Line();
+    while(success && file.getline(buffer, MAX_LINE_LENGTH)) {
+        Line* curr = new (std::nothrow) Line;
         if(!(curr && curr->setContent(buffer))) {
-            return false;
+            delete curr;
+            success = false;
+            break;
         }
 
         lastLine->setNextLine(curr);
@@ -70,8 +70,9 @@ bool Document::open(const char *filename) {
         lineCount++;
     }
 
-    fileOpened = true;
-    return true;
+    fileOpened = success;
+    delete[] buffer;
+    return success;
 }
 
 bool Document::save() {

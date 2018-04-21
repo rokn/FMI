@@ -3,6 +3,10 @@
 #include "Line.h"
 #include "Document.h"
 
+static const char* ITALIC_MOD = "**";
+static const char* BOLD_MOD   =  "*";
+static const char* HEADER_MOD = "# ";
+
 Line::Line()
 : isHeader(false)
 , content(nullptr)
@@ -17,7 +21,7 @@ Line::Line(const char *content)
 
 bool Line::setContent(const char *content) {
     this->content = new (std::nothrow) char[strlen(content) + 1];
-    if(!content) {
+    if(!this->content) {
         return false;
     }
 
@@ -38,19 +42,19 @@ bool Line::setContent(const char *content) {
 
 unsigned Line::countWords() {
     unsigned count = 0;
-    const char* content = this->content;
-    if(!content || !(*content)) {
-        return count;
+    const char* tmpContent = content;
+    if(!tmpContent || !(*tmpContent)) {
+        return 0;
     }
 
-    char prev = *content;
+    char prev = *tmpContent;
 
-    while(*(++content)) {
-        if(isSpace(*content) && !isSpace(prev)) {
+    while(*(++tmpContent)) {
+        if(isSpace(*tmpContent) && !isSpace(prev)) {
             ++count;
         }
 
-        prev = *content;
+        prev = *tmpContent;
     }
 
     if(!isSpace(prev)) {
@@ -115,7 +119,7 @@ void Line::write(std::ostream &output) const {
 }
 
 bool Line::isSpace(char c) const {
-    return c == ' ';
+    return c == ' ' || c == '\t';
 }
 
 void Line::writePart(const char *&content, std::ostream &ostream, bool spaces) const {
@@ -140,16 +144,16 @@ void Line::writeMod(std::ostream &output, unsigned word, bool isBack) const {
     unsigned modDiff = wordMods[word] & (~otherMod); // Inverse implication
 
     if(modDiff & Document::ITALIC) {
-        output << "**";
+        output << ITALIC_MOD;
     }
 
     if(modDiff & Document::BOLD) {
-        output << '*';
+        output << BOLD_MOD;
     }
 }
 
 void Line::handleHeader(std::ostream &ostream) const {
     if(isHeader) {
-        ostream << "# ";
+        ostream << HEADER_MOD;
     }
 }
