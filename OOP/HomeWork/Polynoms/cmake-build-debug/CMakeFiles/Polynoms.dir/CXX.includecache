@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rokner/FMI/OOP/HomeWork/Polynoms/Polynomial.h
+cmath
+-
+algorithm
+-
+iostream
+-
+
+/home/rokner/FMI/OOP/HomeWork/Polynoms/main.cpp
+iostream
+-
+Polynomial.h
+/home/rokner/FMI/OOP/HomeWork/Polynoms/Polynomial.h
+

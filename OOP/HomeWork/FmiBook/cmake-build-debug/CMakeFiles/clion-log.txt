@@ -1,0 +1,4 @@
+/home/rokner/Installs/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rokner/FMI/OOP/HomeWork/FmiBook
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rokner/FMI/OOP/HomeWork/FmiBook/cmake-build-debug

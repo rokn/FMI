@@ -1,0 +1,3 @@
+/home/rokner/FMI/OOP/HomeWork/FmiBook/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rokner/FMI/OOP/HomeWork/FmiBook/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rokner/FMI/OOP/HomeWork/FmiBook/cmake-build-debug/CMakeFiles/FmiBook.dir

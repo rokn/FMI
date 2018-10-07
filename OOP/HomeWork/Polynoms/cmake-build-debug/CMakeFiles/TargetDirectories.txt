@@ -1,0 +1,3 @@
+/home/rokner/FMI/OOP/HomeWork/Polynoms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rokner/FMI/OOP/HomeWork/Polynoms/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rokner/FMI/OOP/HomeWork/Polynoms/cmake-build-debug/CMakeFiles/Polynoms.dir

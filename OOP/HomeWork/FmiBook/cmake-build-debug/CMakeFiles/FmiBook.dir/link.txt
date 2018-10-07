@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/FmiBook.dir/ImagePost.cpp.o CMakeFiles/FmiBook.dir/Post.cpp.o CMakeFiles/FmiBook.dir/PostsDAOMemory.cpp.o CMakeFiles/FmiBook.dir/SocialNetwork.cpp.o CMakeFiles/FmiBook.dir/TextPost.cpp.o CMakeFiles/FmiBook.dir/UrlPost.cpp.o CMakeFiles/FmiBook.dir/User.cpp.o CMakeFiles/FmiBook.dir/Vector.cpp.o CMakeFiles/FmiBook.dir/main.cpp.o  -o FmiBook 
